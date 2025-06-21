@@ -8,12 +8,12 @@
 
 [[redirects]]
   from = "/api/node/*"
-  to = "/.netlify/functions/node/:splat"
+  to = "/.netlify/functions/node_api/:splat"
   status = 200
 
 [[redirects]]
   from = "/api/python/*"
-  to = "/.netlify/functions/python/:splat"
+  to = "/.netlify/functions/python_api/:splat"
   status = 200
 
 [[redirects]]
