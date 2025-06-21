@@ -10,10 +10,6 @@ from io import BytesIO
 import base64
 import serverless_wsgi
 
-# This is the handler that Netlify will use to run your function
-def handler(event, context):
-    return serverless_wsgi.handle(app, event, context)
-
 # Load environment variables
 load_dotenv()
 
