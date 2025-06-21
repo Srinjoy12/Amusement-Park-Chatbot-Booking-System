@@ -104,7 +104,7 @@ function ChatInterface({ session }) {
 
     // 1. Create Order via Backend
     try {
-      const orderResponse = await fetch(`${process.env.REACT_APP_NODE_API_URL}/api/create-order`, {
+      const orderResponse = await fetch(`/api/node/create-order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ function ChatInterface({ session }) {
         handler: async function (response) {
           // 3. Payment Successful - Verify via Backend
           try {
-            const verifyResponse = await fetch(`${process.env.REACT_APP_NODE_API_URL}/api/verify-payment`, {
+            const verifyResponse = await fetch(`/api/node/verify-payment`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -216,7 +216,7 @@ function ChatInterface({ session }) {
 
     try {
       // First, get response from chat endpoint
-      const response = await fetch(`${process.env.REACT_APP_NODE_API_URL}/chat`, {
+      const response = await fetch(`/api/python/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -534,7 +534,7 @@ function ChatInterface({ session }) {
       console.log('Submitting booking:', bookingDetails);
 
       // Create booking
-      const response = await fetch(`${process.env.REACT_APP_NODE_API_URL}/bookings`, {
+      const response = await fetch(`/api/node/bookings`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
