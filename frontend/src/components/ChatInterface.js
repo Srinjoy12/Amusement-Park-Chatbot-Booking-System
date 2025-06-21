@@ -9,24 +9,18 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { motion, AnimatePresence } from 'framer-motion';
 import { supabase } from '../App'; // Import supabase
 import {
-  processPayment,
   getParks,
   getAttractions,
   getTicketTypes,
   getTimeSlots,
   createBooking,
   getAddOns,
-  bookAddOn,
   getAccommodations,
-  bookAccommodation,
   getTransportOptions,
-  bookTransport,
   generateQR,
-  getFAQs,
-  getParkRules,
   getCrowdPrediction,
   getRideRecommendations,
-  applyPromo
+  applyPromo,
 } from '../utils/api';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
