@@ -1,0 +1,7 @@
+flask==2.0.1
+flask-cors==3.0.10
+openai==0.27.0
+python-dotenv==0.19.0
+supabase==1.0.3
+qrcode==7.3.1
+Pillow==11.2.1
