@@ -1,0 +1,22 @@
+[build]
+  command = "npm install && npm run build"
+  publish = "frontend/build"
+  base = "frontend"
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/api/node/*"
+  to = "/.netlify/functions/node/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/python/*"
+  to = "/.netlify/functions/python/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
